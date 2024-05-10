@@ -9,3 +9,7 @@ class Project(models.Model):
     startDate = models.DateField()
     endDate = models.DateField()
     desc = models.TextField(max_length=200)
+    
+    
+    def __str__(self):
+        return self.title

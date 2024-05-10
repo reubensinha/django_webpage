@@ -1,13 +1,106 @@
-<h1>Projects</h1>
 
-{% for project in projects %}
-    <div>
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.technologies }}</p>
-        <p>{{ project.url }}</p>
-        <p>{{ project.startDate }}</p>
-        <p>{{ project.endDate }}</p>
-        <p>{{ project.desc }}</p>
-        <br />
-    </div>
-{% endfor %}
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Reuben Sinha</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    {% comment %} <link href="album.css" rel="stylesheet"> {% endcomment %}
+  </head>
+
+  <body>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Reuben Sinha</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+    
+    <br>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Check out all my work!</h1>
+          <p class="lead text-muted">Here you'll find any project's I've worked on!</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Check out my Resume</a>
+            <a href="#" class="btn btn-secondary my-2">Check out my GitHub</a>
+          </p>
+          <img src="{% static 'reuben.jpg' %}" height="200" alt="Reuben Sinha"></img>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+
+            {% for project in projects %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ project.image.url }}">
+                <div class="card-body">
+                  <p class="card-text"><b>{{ project.title }}</b></p>
+                  <p class="card-text">{{ project.desc }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{{ project.url }}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">GitHub</button>
+                      </a>
+                    </div>
+                    <small class="text-muted">{{ project.technologies }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          Contact Me
+        </p>
+        <ul style="list-style-type:none;">
+          <li><a href="#" style="color:black; text-decoration:none" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">LinkedIn</a></li>
+          <li><a href="#" style="color:black; text-decoration:none" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">GitHub</a></li>
+          <li><a href="#" style="color:black; text-decoration:none" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% comment %} <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script> {% endcomment %}
+    <script src={% static 'jquery-3.7.1.min.js' %}></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+</html>
