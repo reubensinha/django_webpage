@@ -1,8 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <!-- TODO: Add repo name -->
-  <a href="https://github.com/reubensinha/repo_name">
+  <a href="https://github.com/reubensinha/django_webpage">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -29,10 +28,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Rework frontend in React
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
