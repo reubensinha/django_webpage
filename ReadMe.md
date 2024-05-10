@@ -28,6 +28,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 
+- [ ] Deploy to AWS
 - [ ] Rework frontend in React
 
 
