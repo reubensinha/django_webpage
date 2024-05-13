@@ -13,6 +13,10 @@
   <br />
 </div>
 
+<!-- Access the website -->
+
+### [Website](https://www.reuben-sinha.com/)
+
 
 <!-- ABOUT THE PROJECT -->
 
@@ -28,7 +32,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Deploy to AWS
+- [ ] Add login page for ease of access
 - [ ] Rework frontend in React
 
 
