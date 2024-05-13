@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-wkdh-&+e))*kr)-05%#v%j0)ub32a&hmmtwqd5b-a5c4+wr&_*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-dev22.us-west-2.elasticbeanstalk.com',
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'portfolio-dev22.us-west-2.elasticbeanstalk.com',
                  'www.portfolio-dev22.us-west-2.elasticbeanstalk.com',
                  'reuben-sinha.com',
                  'www.reuben-sinha.com']
@@ -138,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     AWS_S3_REGION_NAME = os.environ['AWS_S3_REGION_NAME']
