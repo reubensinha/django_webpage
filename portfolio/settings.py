@@ -32,6 +32,9 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  'reuben-sinha.com',
                  'www.reuben-sinha.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1',
+                        'https://*.portfolio-dev22.us-west-2.elasticbeanstalk.com',
+                        'https://*.reuben-sinha.com']
 
 # Application definition
 
