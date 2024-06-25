@@ -27,13 +27,13 @@ SECRET_KEY = 'django-insecure-wkdh-&+e))*kr)-05%#v%j0)ub32a&hmmtwqd5b-a5c4+wr&_*
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1',
-                 'portfolio-dev22.us-west-2.elasticbeanstalk.com',
-                 'www.portfolio-dev22.us-west-2.elasticbeanstalk.com',
+                 'portfolio-env.eba-tbembinj.us-west-2.elasticbeanstalk.com',
+                 'www.portfolio-env.eba-tbembinj.us-west-2.elasticbeanstalk.com',
                  'reuben-sinha.com',
                  'www.reuben-sinha.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1',
-                        'https://*.portfolio-dev22.us-west-2.elasticbeanstalk.com',
+                        'https://*.portfolio-env.eba-tbembinj.us-west-2.elasticbeanstalk.com',
                         'https://*.reuben-sinha.com']
 
 # Application definition
